@@ -16,8 +16,8 @@ import matplotlib.pyplot as plt
 #     buffered in the system, thus last few images will not be readout
 
 # !!! Reset is required for each round !!!
-BATMAN_START    = 1000
-BATMAN_END      = 2002
+BATMAN_START    = 1
+BATMAN_END      = 5002
 BATMAN_INTERVAL = 1
 
 if __name__ == "__main__" :
@@ -87,7 +87,11 @@ if __name__ == "__main__" :
             jpeg = jpeg + b'\xFF\xD9'
             
             # Write jpeg file --------------------------------------------------------------------------------------------------
-            file = open("./blackpearl/jpeg/batman_%d.jpeg" % jpeg_wr_cnt, 'wb')
+            try:
+                file = open("./blackpearl/jpeg/batman_%d.jpeg" % jpeg_wr_cnt, 'wb')
+            except:
+                os.mkdir('./blackpearl/jpeg')
+                file = open("./blackpearl/jpeg/batman_%d.jpeg" % jpeg_wr_cnt, 'wb')
             file.write(jpeg)
             file.close()
 

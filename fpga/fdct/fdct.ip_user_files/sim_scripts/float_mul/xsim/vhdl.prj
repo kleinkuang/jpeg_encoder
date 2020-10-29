@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../fdct.srcs/sources_1/ip/float_mul/sim/float_mul.vhd" \
+
+nosort

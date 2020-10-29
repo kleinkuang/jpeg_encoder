@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Oct 29 00:11:59 2020
+# Process ID: 23232
+# Current directory: F:/jpeg_encoder/fpga/encoder
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent26604 F:\jpeg_encoder\fpga\encoder\encoder.xpr
+# Log file: F:/jpeg_encoder/fpga/encoder/vivado.log
+# Journal file: F:/jpeg_encoder/fpga/encoder\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/jpeg_encoder/fpga/encoder/encoder.xpr
+update_compile_order -fileset sources_1
+reset_project

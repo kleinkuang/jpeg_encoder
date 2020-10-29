@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>customized_ip</spirit:library>
+  <spirit:name>fdct_0</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>clk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>clk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.FREQ_HZ">100000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.PHASE">0.000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.CLK_DOMAIN"/>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.ASSOCIATED_BUSIF"/>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.ASSOCIATED_RESET"/>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.CLK.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>clk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>nrst</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>din</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">7</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>din_valid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>dout</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">7</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>dout_valid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+  </spirit:model>
+  <spirit:description>fdct_v1_0</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">fdct_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:displayName>fdct_v1_0</xilinx:displayName>
+      <xilinx:definitionSource>package_project</xilinx:definitionSource>
+      <xilinx:coreRevision>6</xilinx:coreRevision>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68758352_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f4e6587_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22ceea14_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@96ba6e9_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f3fa3b2_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e0415a1_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@487414de_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b5b1a1b_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3955442d_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30d2da81_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1882fb5f_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e44f993_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@399096b9_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4aa95e4e_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69b42332_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ef82032_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d37db2f_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e659f4c_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@259b82af_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ef688fc_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6336d5fc_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2742e7be_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38c6722e_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2935c1d7_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61c6e279_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30bc0fb8_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47d5395e_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@764101db_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@136e4e6_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27f79e0b_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3492cf2c_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7806479b_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45150725_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61df0d3a_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3892677f_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71ee708e_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@793fe838_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bfd1ef5_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c8640cf_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13d3af57_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e52db5e_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c118879_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27d7bc8f_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@742d58b0_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17cca1cb_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3231e9fc_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ba9b91f_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@380dd626_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@340f469c_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49414af7_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16c44470_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a37d956_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@443fa277_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72feac1d_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3aaa65ce_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77d1582e_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b0186da_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6587fb84_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@cc47836_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d08f74b_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47ffd522_ARCHIVE_LOCATION">f:/jpeg_ip_streamer/fdct</xilinx:tag>
+      </xilinx:tags>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="a88d4390"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="c49d0734"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="7f589991"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="be4b8d81"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

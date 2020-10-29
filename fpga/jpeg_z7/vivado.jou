@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Oct 29 00:13:27 2020
+# Process ID: 33372
+# Current directory: F:/jpeg_encoder/fpga/jpeg_z7
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent27348 F:\jpeg_encoder\fpga\jpeg_z7\jpeg_z7.xpr
+# Log file: F:/jpeg_encoder/fpga/jpeg_z7/vivado.log
+# Journal file: F:/jpeg_encoder/fpga/jpeg_z7\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/jpeg_encoder/fpga/jpeg_z7/jpeg_z7.xpr
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 24
+wait_on_run synth_1
+reset_run synth_1
+reset_run fifo_uart_tx_synth_1
+reset_run fdct_0_synth_1
+reset_run encoder_0_synth_1
+reset_project

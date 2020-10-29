@@ -1,0 +1,1 @@
+float_add.vhd,vhdl,xil_defaultlib,../../../../fdct.srcs/sources_1/ip/float_add/sim/float_add.vhd,

@@ -1,0 +1,46 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Oct 29 00:13:27 2020
+# Process ID: 33372
+# Current directory: F:/jpeg_encoder/fpga/jpeg_z7
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent27348 F:\jpeg_encoder\fpga\jpeg_z7\jpeg_z7.xpr
+# Log file: F:/jpeg_encoder/fpga/jpeg_z7/vivado.log
+# Journal file: F:/jpeg_encoder/fpga/jpeg_z7\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/jpeg_encoder/fpga/jpeg_z7/jpeg_z7.xpr
+INFO: [Project 1-313] Project file moved from 'F:/jpeg_ip_streamer/jpeg_z7' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/jpeg_encoder/fpga/fdct'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/jpeg_encoder/fpga/encoder'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/jpeg_encoder/fpga/zigzag'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 24
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fifo_uart_tx'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fdct_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zigzag_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'encoder_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_div'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_div'...
+[Thu Oct 29 00:14:06 2020] Launched fifo_uart_tx_synth_1, fdct_0_synth_1, zigzag_0_synth_1, encoder_0_synth_1, clk_div_synth_1...
+Run output will be captured here:
+fifo_uart_tx_synth_1: F:/jpeg_encoder/fpga/jpeg_z7/jpeg_z7.runs/fifo_uart_tx_synth_1/runme.log
+fdct_0_synth_1: F:/jpeg_encoder/fpga/jpeg_z7/jpeg_z7.runs/fdct_0_synth_1/runme.log
+zigzag_0_synth_1: F:/jpeg_encoder/fpga/jpeg_z7/jpeg_z7.runs/zigzag_0_synth_1/runme.log
+encoder_0_synth_1: F:/jpeg_encoder/fpga/jpeg_z7/jpeg_z7.runs/encoder_0_synth_1/runme.log
+clk_div_synth_1: F:/jpeg_encoder/fpga/jpeg_z7/jpeg_z7.runs/clk_div_synth_1/runme.log
+[Thu Oct 29 00:14:07 2020] Launched synth_1...
+Run output will be captured here: F:/jpeg_encoder/fpga/jpeg_z7/jpeg_z7.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:17 ; elapsed = 00:00:11 . Memory (MB): peak = 871.609 ; gain = 48.625
+reset_run synth_1
+reset_run fifo_uart_tx_synth_1
+reset_run fdct_0_synth_1
+reset_run encoder_0_synth_1
+reset_project
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 29 00:14:58 2020...

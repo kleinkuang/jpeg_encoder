@@ -207,5 +207,5 @@ if __name__ == "__main__":
 
     # Start
     # - Test image
-    img = plt.imread('./legolas/img_128x128.bmp', 0)
+    img = plt.imread('./demo/batman_3090_raw.bmp', 0)
     jpeg_baseline(img, True)

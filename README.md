@@ -125,3 +125,13 @@ Use external UART cable to challenge the designed JPEG encoder at baudrate of 11
 `!!! Reset is required before executing the python script jpeg_z7_streamer !!!`
 
 <img src="https://github.com/kleinkuang/jpeg_encoder/blob/main/fpga/fpga_tb.jpg" width="800">
+
+### Result
+
+| Performance   | CR       | PSNR      |
+| ------------- |:--------:|:---------:|
+| Min           | 3.656    | 24.245    |
+| Max           | 5.821    | 27.652    |
+| Average       | 4.543    | 25.733    |
+
+<img src="https://github.com/kleinkuang/jpeg_encoder/blob/main/fpga/fpga_res_bat_1-5000.png">

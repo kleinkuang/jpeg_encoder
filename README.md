@@ -119,4 +119,9 @@ The designed FPGA IP is fully synthesizable and has been implemented onto the Di
 ### Post-Implementation P&R
 <img src="https://github.com/kleinkuang/jpeg_encoder/blob/main/fpga/fpga_imp.png" width="800">
 
+## Test Platform
+Use external UART cable to challenge the designed JPEG encoder at baudrate of 115200.
 
+`!!! Reset is required before executing the python script jpeg_z7_streamer !!!`
+
+<img src="https://github.com/kleinkuang/jpeg_encoder/blob/main/fpga/fpga_tb.jpg" width="800">

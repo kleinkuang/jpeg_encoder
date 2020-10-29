@@ -14,6 +14,8 @@ Row Image | Encoded by Python IMP. |  Encoded by FPGA IMP.
 
 ## Python Implementation
 
+Print detailed coding process for each minimum coded unit.
+
 #### DCT Matrix
     [[ 0.354  0.354  0.354  0.354  0.354  0.354  0.354  0.354]
      [ 0.49   0.416  0.278  0.098 -0.098 -0.278 -0.416 -0.49 ]
@@ -107,3 +109,14 @@ Row Image | Encoded by Python IMP. |  Encoded by FPGA IMP.
 
 #### Byte stream:
      EB 34 D7 8C 58 58 A2 CA A8 E6 DD 76 A9 EF C0 E8 33 F5 
+     
+## FPGA Implementation
+The designed FPGA IP is fully synthesizable and has been implemented onto the Digilent Atry-Z7 development board (Xilinx Zynq xc7z020clg400-1) for demostration.
+
+### Post-Implementation Utilization
+<img src="https://github.com/kleinkuang/jpeg_encoder/blob/main/fpga/fpga_ut.png">
+
+### Post-Implementation P&R
+<img src="https://github.com/kleinkuang/jpeg_encoder/blob/main/fpga/fpga_imp.png" width="800">
+
+

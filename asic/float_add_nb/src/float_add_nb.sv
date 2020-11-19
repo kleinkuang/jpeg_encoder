@@ -21,7 +21,7 @@
 //            frac ~= '0: NaN
 
 // Round
-// - Round to zero
+// - round to the nearest even
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // Current design does not support the following:

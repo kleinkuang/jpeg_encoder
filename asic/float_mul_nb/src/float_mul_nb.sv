@@ -4,10 +4,10 @@
 // @ Imperial College London
 
 // Non-blocking Float-Point Multipler (Single-Precision)
-// - Latency: 16 clock cycles
+// - latency: 16 clock cycles
 
 // IEEE 754 Format
-// Signed + Exponent + Fraction
+// signed + exponent + mantissa
 // 1b     + 8b       + 23b
 
 // Normalized
@@ -19,6 +19,9 @@
 // Exception
 // exp = 0xFF frac  = '0: Infinity
 //            frac ~= '0: NaN
+
+// Round
+// - round to nearest even
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // Current design does not support the following:
@@ -56,13 +59,12 @@ assign {man1, man2} = {din1[22:0],  din2[22:0]};
 // Sign & Exponent
 // -------------------------------------------------------------
 logic       sig_int;
-logic [8:0] exp_int;
-logic [8:0] exp_debug;
+logic [8:0] exp_int; // Will need another bit for over/underflow detection
 
 shift_reg #
 (
     .WIDTH(9),
-    .STAGE(13)
+    .STAGE(14)
 ) exp_sf
 (
     .clk  (clk),
@@ -73,7 +75,7 @@ shift_reg #
 shift_reg #
 (
     .WIDTH(1),
-    .STAGE(14)
+    .STAGE(15)
 ) sig_sf
 (
     .clk  (clk),
@@ -81,18 +83,15 @@ shift_reg #
     .dout (sig_int)
 );
 
-assign exp_debug = exp_int - 8'd127;
-
 // -------------------------------------------------------------
 // Fixed-point Multiplication
 // -------------------------------------------------------------
 logic [47:0] fix_pro;
-logic        fix_pro_valid;
-logic        fix_zero;
+logic        fix_valid;
 
 fixed_mul_nb #
 (
-    .WIDTH(26)
+    .WIDTH(26) // Latency: WIDTH/2 + 1
 ) mul
 (
     .clk        (clk),
@@ -101,62 +100,65 @@ fixed_mul_nb #
     .din2       ({2'b0, exp2=='0 ? 1'b0 : 1'b1, man2}),
     .din_valid  (din_valid),
     .dout       (fix_pro),
-    .dout_valid (fix_pro_valid)
+    .dout_valid (fix_valid)
 );
-
-assign fix_zero = fix_pro=='0;
 
 // -------------------------------------------------------------
 // Round
 // -------------------------------------------------------------
-logic [22:0] round;
-logic [7:0]  round_exp;
-logic        round_zero;
-logic        round_valid;
+logic [47:0] rod_fix;
+logic [24:0] rod_thw;
+logic [22:0] rod_man;
+logic [7:0]  rod_exp;
+logic        rod_zero;
+logic [2:0]  rod_grs;
+logic        rod_up_int;
+logic        rod_up;
+logic        rod_valid;
+
+assign rod_fix    = fix_pro << (fix_pro[47] ? 2'd1 : 2'd2);
+assign rod_thw    = rod_fix[24:0];
+assign rod_grs    = {rod_fix[24:23], rod_fix[22:0]!='0};
+assign rod_up_int = rod_grs[2] & (rod_grs[1:0]==2'd00 ? rod_fix[25] : 1'b1);
 
 always_ff @ (posedge clk, negedge nrst)
     if(~nrst)
-        round_valid <= '0;
+        rod_valid <= '0;
     else
-        round_valid <= fix_pro_valid;
+        rod_valid <= fix_valid;
 
 always_ff @ (posedge clk)
-    if(fix_pro_valid) begin
-        if(fix_pro[47]) begin
-            round <= fix_pro[23] & fix_pro[22:0]!='0 ? fix_pro[46:24] + 24'd1 : fix_pro[46:24];
-            round_exp <= exp_int + 8'd1;
-        end
-        else begin
-            round <= fix_pro[22] & fix_pro[21:0]!='0 ? fix_pro[45:23] + 24'd1 : fix_pro[45:23];
-            round_exp <= exp_int;
-        end
-        round_zero <= fix_zero;
+    if(fix_valid) begin
+        rod_man  <= rod_fix[47:25];
+        rod_exp  <= fix_pro[47] ? exp_int + 8'd1 : exp_int;
+        rod_zero <= fix_pro=='0;
+        rod_up   <= rod_up_int;
     end
 
 // -------------------------------------------------------------
 // Normalization
-// - further development on denormalized number and expcetion
-//   should start here
 // -------------------------------------------------------------
-logic        sig_final;
-logic [7:0]  exp_final;
-logic [22:0] man_final;
-logic        is_zero;
+logic        norm_sig;
+logic [7:0]  norm_exp;
+logic [22:0] norm_man;
+logic [23:0] norm_man_int;
+logic        norm_zero;
 
 always_ff @ (posedge clk, negedge nrst)
     if(~nrst)
         dout_valid <= '0;
     else
-        dout_valid <= round_valid;
+        dout_valid <= rod_valid;
+        
+assign norm_man_int = {1'b0, rod_man} + rod_up;
 
 always_ff @ (posedge clk)
-    if(round_valid) begin
-        sig_final <= sig_int;
-        exp_final <= round_exp;
-        man_final <= round;
-        is_zero   <= round_zero;
+    if(rod_valid) begin
+        norm_sig  <= rod_zero ? '0 : sig_int;
+        norm_exp  <= rod_zero ? '0 : rod_exp + norm_man_int[23];
+        norm_man  <= rod_zero ? '0 : norm_man_int[22:0];
     end
-    
-assign dout = is_zero ? '0 : {sig_final, exp_final, man_final};
+
+assign dout = {norm_sig, norm_exp, norm_man};
 
 endmodule

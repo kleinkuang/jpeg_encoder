@@ -27,10 +27,8 @@ initial begin
 end
 
 // Testbench
-
-logic [WIDTH*2-1:0] result [31:0];
 logic error = '0;
-integer fw;
+//integer fw;
 
 initial begin
     nrst = '0;
@@ -38,10 +36,10 @@ initial begin
     din2 = 0;
     din_valid = '0;
 
-    fw = $fopen("fixed_mul_nb_tb.log", "w");
-    $fwrite(fw, "%15s%15s: %20s%20s %8s\n", "Multiplicand", "Mutiplier", "Golden", "FPGA Out", "Compare");
-    $fclose(fw);
-    fw = $fopen("fixed_mul_nb_tb.log", "a");
+    //fw = $fopen("fixed_mul_nb_tb.log", "w");
+    //$fwrite(fw, "%15s%15s: %20s%20s %8s\n", "Multiplicand", "Mutiplier", "Golden", "FPGA Out", "Compare");
+    //$fclose(fw);
+    //fw = $fopen("fixed_mul_nb_tb.log", "a");
     
     @(posedge clk)
         nrst <= '1;
@@ -64,10 +62,12 @@ initial begin
             longint p = a*b;
             longint r = $signed(dout);
             string  s = p==r ? "OK" : "ERROR";
-            $fwrite(fw, "%15d%15d: %20d%20d %8s\n", a, b, p, r, s);
+            //$fwrite(fw, "%15d%15d: %20d%20d %8s\n", a, b, p, r, s);
+            $write("%15d%15d: %20d%20d %8s\n", a, b, p, r, s);
             if(~error & p!=r) begin
                 error <= '1;
-                $write("ERROR !!!");
+                //$write("ERROR !!!");
+                $write("ERROR !!!\n");
             end
         end
     end

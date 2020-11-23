@@ -5,6 +5,13 @@ The software implementation aims to realize the JPEG compression algorithm from 
 - it can be used to generate test vectors for verifying the hardware implementation on FPGA.
 - it only requires `matplotlib` or `opencv-python` module to read the `.bmp` file and `numpy` for matrix operations.
 
+The ASIC Implementation is fully synthesizable which contains non-blocking floating-point IPs.
+- floating-point multiplier (radix-4 booth algorithm, round to the nearest even)
+- floating-point adder      (round to the nearest even)
+- floating-point divider    (long-term division, round to zero)
+- floating point to integer
+- integer to floating point
+
 ## Python vs FPGA Implementation
 
 ### \# Result 
@@ -114,10 +121,18 @@ Print detailed coding process for each minimum coded unit.
 The designed FPGA IP is fully synthesizable and has been implemented onto the Digilent Atry-Z7 development board (Xilinx Zynq xc7z020clg400-1) for demostration.
 
 ### Post-Implementation Utilization
+FPGA Implementation using floating-point IPs
 <img src="https://github.com/kleinkuang/jpeg_encoder/blob/main/fpga/fpga_ut.png">
 
+FPGA Implementation using fully synthesizable IPs
+<img src="https://github.com/kleinkuang/jpeg_encoder/blob/main/asic/fpga_ut_asic.png.png">
+
 ### Post-Implementation P&R
+FPGA Implementation using floating-point IPs
 <img src="https://github.com/kleinkuang/jpeg_encoder/blob/main/fpga/fpga_imp.png" width="800">
+
+FPGA Implementation using fully synthesizable IPs
+<img src="https://github.com/kleinkuang/jpeg_encoder/blob/main/asic/fpga_imp_asic.png" width="800">
 
 ## Test Platform
 Use external UART cable to challenge the designed JPEG encoder at baudrate of 115200.

@@ -5,7 +5,7 @@ The software implementation aims to realize the JPEG compression algorithm from 
 - it can be used to generate test vectors for verifying the hardware implementation on FPGA.
 - it only requires `matplotlib` or `opencv-python` module to read the `.bmp` file and `numpy` for matrix operations.
 
-The ASIC Implementation is fully synthesizable which contains non-blocking floating-point IPs.
+The ASIC Implementation is fully synthesizable which contains non-blocking floating-point modules designed by HDL.
 - floating-point multiplier (radix-4 booth algorithm, round to the nearest even)
 - floating-point adder      (round to the nearest even)
 - floating-point divider    (long-term division, round to zero)

@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Nov 23 21:47:25 2020
+# Process ID: 11504
+# Current directory: F:/jpeg_encoder/asic/jpeg_ips/float_add_nb
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22796 F:\jpeg_encoder\asic\jpeg_ips\float_add_nb\float_add_nb.xpr
+# Log file: F:/jpeg_encoder/asic/jpeg_ips/float_add_nb/vivado.log
+# Journal file: F:/jpeg_encoder/asic/jpeg_ips/float_add_nb\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/jpeg_encoder/asic/jpeg_ips/float_add_nb/float_add_nb.xpr
+update_compile_order -fileset sources_1
+reset_project
+reset_simulation -simset sim_1 -mode behavioral

@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Nov 23 21:47:25 2020
+# Process ID: 11504
+# Current directory: F:/jpeg_encoder/asic/jpeg_ips/float_add_nb
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22796 F:\jpeg_encoder\asic\jpeg_ips\float_add_nb\float_add_nb.xpr
+# Log file: F:/jpeg_encoder/asic/jpeg_ips/float_add_nb/vivado.log
+# Journal file: F:/jpeg_encoder/asic/jpeg_ips/float_add_nb\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/jpeg_encoder/asic/jpeg_ips/float_add_nb/float_add_nb.xpr
+INFO: [Project 1-313] Project file moved from 'F:/jpeg_encoder/asic/float_add_nb' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+reset_project
+reset_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-2266] Removing simulation data...
+INFO: [Vivado 12-2267] Reset complete
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 23 21:48:06 2020...

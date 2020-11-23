@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Nov 22 20:21:56 2020
+# Process ID: 12128
+# Current directory: F:/jpeg_encoder/asic/jpeg_z7_asic_8x8/jpeg_z7_asic_8x8.runs/synth_1
+# Command line: vivado.exe -log jpeg.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source jpeg.tcl
+# Log file: F:/jpeg_encoder/asic/jpeg_z7_asic_8x8/jpeg_z7_asic_8x8.runs/synth_1/jpeg.vds
+# Journal file: F:/jpeg_encoder/asic/jpeg_z7_asic_8x8/jpeg_z7_asic_8x8.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source jpeg.tcl -notrace

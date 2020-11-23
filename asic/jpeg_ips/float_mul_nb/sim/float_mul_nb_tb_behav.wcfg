@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="float_mul_nb_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="float_mul_nb_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="38492691666666fs"></ZoomStartTime>
+      <ZoomEndTime time="64332691666667fs"></ZoomEndTime>
+      <Cursor1Time time="60026025000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="137"></NameColumnWidth>
+      <ValueColumnWidth column_width="242"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="12" />
+   <wvobject fp_name="/float_mul_nb_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/float_mul_nb_tb/nrst" type="logic">
+      <obj_property name="ElementShortName">nrst</obj_property>
+      <obj_property name="ObjectShortName">nrst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/float_mul_nb_tb/din1" type="array">
+      <obj_property name="ElementShortName">din1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">din1[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/float_mul_nb_tb/din2" type="array">
+      <obj_property name="ElementShortName">din2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">din2[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/float_mul_nb_tb/din_valid" type="logic">
+      <obj_property name="ElementShortName">din_valid</obj_property>
+      <obj_property name="ObjectShortName">din_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/float_mul_nb_tb/dout" type="array">
+      <obj_property name="ElementShortName">dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/float_mul_nb_tb/dout_ip" type="array">
+      <obj_property name="ElementShortName">dout_ip[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dout_ip[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/float_mul_nb_tb/dout" type="array">
+      <obj_property name="ElementShortName">dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/float_mul_nb_tb/dout_ip" type="array">
+      <obj_property name="ElementShortName">dout_ip[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dout_ip[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/float_mul_nb_tb/dout_ip_valid" type="logic">
+      <obj_property name="ElementShortName">dout_ip_valid</obj_property>
+      <obj_property name="ObjectShortName">dout_ip_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/float_mul_nb_tb/dout_valid" type="logic">
+      <obj_property name="ElementShortName">dout_valid</obj_property>
+      <obj_property name="ObjectShortName">dout_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/float_mul_nb_tb/error" type="logic">
+      <obj_property name="ElementShortName">error</obj_property>
+      <obj_property name="ObjectShortName">error</obj_property>
+   </wvobject>
+</wave_config>

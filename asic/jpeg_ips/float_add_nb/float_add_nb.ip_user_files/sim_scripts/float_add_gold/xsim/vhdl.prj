@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../float_add_nb.srcs/sources_1/ip/float_add_gold/sim/float_add_gold.vhd" \
+
+nosort

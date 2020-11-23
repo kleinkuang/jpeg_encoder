@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="float_div_nb_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="float_div_nb_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="2212000001fs"></ZoomEndTime>
+      <Cursor1Time time="100000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="208"></NameColumnWidth>
+      <ValueColumnWidth column_width="357"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="12" />
+   <wvobject fp_name="/float_div_nb_tb/nrst" type="logic">
+      <obj_property name="ElementShortName">nrst</obj_property>
+      <obj_property name="ObjectShortName">nrst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/float_div_nb_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="group121" type="group">
+      <obj_property name="label">Input</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/float_div_nb_tb/din1" type="array">
+         <obj_property name="ElementShortName">din1[31:0]</obj_property>
+         <obj_property name="ObjectShortName">din1[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">24</obj_property>
+         <obj_property name="radix_otherWidth">8</obj_property>
+      </wvobject>
+      <wvobject fp_name="/float_div_nb_tb/din2" type="array">
+         <obj_property name="ElementShortName">din2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">din2[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">24</obj_property>
+         <obj_property name="radix_otherWidth">8</obj_property>
+      </wvobject>
+      <wvobject fp_name="/float_div_nb_tb/din_valid" type="logic">
+         <obj_property name="ElementShortName">din_valid</obj_property>
+         <obj_property name="ObjectShortName">din_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/float_div_nb_tb/dut/sig1" type="logic">
+         <obj_property name="ElementShortName">sig1</obj_property>
+         <obj_property name="ObjectShortName">sig1</obj_property>
+      </wvobject>
+      <wvobject fp_name="/float_div_nb_tb/dut/sig2" type="logic">
+         <obj_property name="ElementShortName">sig2</obj_property>
+         <obj_property name="ObjectShortName">sig2</obj_property>
+      </wvobject>
+      <wvobject fp_name="/float_div_nb_tb/dut/exp1" type="array">
+         <obj_property name="ElementShortName">exp1[7:0]</obj_property>
+         <obj_property name="ObjectShortName">exp1[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/float_div_nb_tb/dut/exp2" type="array">
+         <obj_property name="ElementShortName">exp2[7:0]</obj_property>
+         <obj_property name="ObjectShortName">exp2[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/float_div_nb_tb/dut/man1" type="array">
+         <obj_property name="ElementShortName">man1[22:0]</obj_property>
+         <obj_property name="ObjectShortName">man1[22:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/float_div_nb_tb/dut/man2" type="array">
+         <obj_property name="ElementShortName">man2[22:0]</obj_property>
+         <obj_property name="ObjectShortName">man2[22:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group132" type="group">
+      <obj_property name="label">Diviend_Divisor</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/float_div_nb_tb/dut/div_end" type="array">
+         <obj_property name="ElementShortName">div_end[23:0]</obj_property>
+         <obj_property name="ObjectShortName">div_end[23:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">UNSIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">23</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/float_div_nb_tb/dut/div_sor" type="array">
+         <obj_property name="ElementShortName">div_sor[23:0]</obj_property>
+         <obj_property name="ObjectShortName">div_sor[23:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">UNSIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">23</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/float_div_nb_tb/dut/div_valid" type="logic">
+         <obj_property name="ElementShortName">div_valid</obj_property>
+         <obj_property name="ObjectShortName">div_valid</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group137" type="group">
+      <obj_property name="label">Division</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/float_div_nb_tb/dut/fix_quo" type="array">
+         <obj_property name="ElementShortName">fix_quo[24:0]</obj_property>
+         <obj_property name="ObjectShortName">fix_quo[24:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">UNSIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">25</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/float_div_nb_tb/dut/fix_quo" type="array">
+         <obj_property name="ElementShortName">fix_quo[24:0]</obj_property>
+         <obj_property name="ObjectShortName">fix_quo[24:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="radix_realType">UNSIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">25</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/float_div_nb_tb/dut/fix_valid" type="logic">
+         <obj_property name="ElementShortName">fix_valid</obj_property>
+         <obj_property name="ObjectShortName">fix_valid</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group51" type="group">
+      <obj_property name="label">Normalization</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/float_div_nb_tb/dut/sig_int" type="logic">
+         <obj_property name="ElementShortName">sig_int</obj_property>
+         <obj_property name="ObjectShortName">sig_int</obj_property>
+      </wvobject>
+      <wvobject fp_name="/float_div_nb_tb/dut/exp_int" type="array">
+         <obj_property name="ElementShortName">exp_int[8:0]</obj_property>
+         <obj_property name="ObjectShortName">exp_int[8:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/float_div_nb_tb/dut/norm_sig" type="logic">
+         <obj_property name="ElementShortName">norm_sig</obj_property>
+         <obj_property name="ObjectShortName">norm_sig</obj_property>
+      </wvobject>
+      <wvobject fp_name="/float_div_nb_tb/dut/norm_exp" type="array">
+         <obj_property name="ElementShortName">norm_exp[7:0]</obj_property>
+         <obj_property name="ObjectShortName">norm_exp[7:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/float_div_nb_tb/dut/norm_man" type="array">
+         <obj_property name="ElementShortName">norm_man[22:0]</obj_property>
+         <obj_property name="ObjectShortName">norm_man[22:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/float_div_nb_tb/dout" type="array">
+      <obj_property name="ElementShortName">dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/float_div_nb_tb/dout_ip" type="array">
+      <obj_property name="ElementShortName">dout_ip[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dout_ip[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/float_div_nb_tb/dout" type="array">
+      <obj_property name="ElementShortName">dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/float_div_nb_tb/dout_ip" type="array">
+      <obj_property name="ElementShortName">dout_ip[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dout_ip[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/float_div_nb_tb/dout_valid" type="logic">
+      <obj_property name="ElementShortName">dout_valid</obj_property>
+      <obj_property name="ObjectShortName">dout_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/float_div_nb_tb/error" type="logic">
+      <obj_property name="ElementShortName">error</obj_property>
+      <obj_property name="ObjectShortName">error</obj_property>
+   </wvobject>
+</wave_config>

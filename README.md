@@ -125,7 +125,7 @@ FPGA Implementation using floating-point IPs
 <img src="https://github.com/kleinkuang/jpeg_encoder/blob/main/fpga/fpga_ut.png">
 
 FPGA Implementation using fully synthesizable IPs
-<img src="https://github.com/kleinkuang/jpeg_encoder/blob/main/asic/fpga_ut_asic.png.png">
+<img src="https://github.com/kleinkuang/jpeg_encoder/blob/main/asic/fpga_ut_asic.png">
 
 ### Post-Implementation P&R
 FPGA Implementation using floating-point IPs

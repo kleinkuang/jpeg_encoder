@@ -21,7 +21,7 @@ module fdct
 logic [7:0] mcu_col [7:0];
 logic       mcu_col_valid;
 
-mcu mcu_inst
+mcu_8x8 mcu_inst
 (
     .clk        (clk),
     .nrst       (nrst),

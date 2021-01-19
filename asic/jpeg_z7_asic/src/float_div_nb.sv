@@ -65,8 +65,8 @@ always_ff @ (posedge clk, negedge nrst)
     else
         div_valid <= din_valid;
 
-always_ff @ (posedge clk)
-    if(din_valid) begin
+always_ff @ (posedge clk) begin
+    //if(din_valid) begin
         div_end <= {exp1!='0, man1};
         div_sor <= {exp2!='0, man2};
     end
@@ -143,8 +143,8 @@ always_ff @ (posedge clk, negedge nrst)
     else
         dout_valid <= fix_valid;
 
-always_ff @ (posedge clk)
-    if(fix_valid) begin
+always_ff @ (posedge clk) begin
+    //if(fix_valid) begin
         norm_sig  <= norm_zero ? '0 : sig_int;
         norm_exp  <= norm_zero ? '0 : (exp_int[7:0] - 8'd1 + fix_quo[24]);
         norm_man  <= norm_zero ? '0 : norm_fix[24:2];

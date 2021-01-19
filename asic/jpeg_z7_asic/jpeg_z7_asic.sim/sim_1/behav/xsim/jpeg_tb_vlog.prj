@@ -1,0 +1,36 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../src/ac_lut.sv" \
+"../../../../src/booth_algo.sv" \
+"../../../../src/conc_bytes.sv" \
+"../../../../src/dc_lut.sv" \
+"../../../../src/dct_lut.sv" \
+"../../../../src/dot_pro.sv" \
+"../../../../src/en_magn.sv" \
+"../../../../src/encoder.sv" \
+"../../../../src/fdct.sv" \
+"../../../../src/fixed_div_nb.sv" \
+"../../../../src/fixed_mul_nb.sv" \
+"../../../../src/float_add_nb.sv" \
+"../../../../src/float_div_nb.sv" \
+"../../../../src/float_mul_nb.sv" \
+"../../../../src/float_to_int8.sv" \
+"../../../../src/int8_to_float.sv" \
+"../../../../src/jpeg.sv" \
+"../../../../src/lead_nz.sv" \
+"../../../../src/level_shift.sv" \
+"../../../../src/mcu.sv" \
+"../../../../src/piso_streamer.sv" \
+"../../../../src/qnt.sv" \
+"../../../../src/ram_8bx128.sv" \
+"../../../../src/ram_8bx64.sv" \
+"../../../../src/rle.sv" \
+"../../../../src/shift_reg.sv" \
+"../../../../src/zigzag.sv" \
+"../../../../src/tb/jpeg_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

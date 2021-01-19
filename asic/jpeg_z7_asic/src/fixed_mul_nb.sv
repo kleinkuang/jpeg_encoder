@@ -131,8 +131,8 @@ always_ff @ (posedge clk, negedge nrst)
         dout_valid <= valid[STEPS-1];
 
 always_ff @ (posedge clk)
-    if(valid[STEPS-1])
-        dout <= {sum_final, {augend[STEPS-1][1:0], product[STEPS-2][(STEPS-2)*2-1:0]}};
+    //if(valid[STEPS-1])
+    dout <= {sum_final, {augend[STEPS-1][1:0], product[STEPS-2][(STEPS-2)*2-1:0]}};
         
 // -------------------------------------------------------------
 // Pipeline based Booth Algorithm Implementation

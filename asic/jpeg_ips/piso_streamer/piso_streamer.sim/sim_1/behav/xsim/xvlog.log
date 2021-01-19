@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/src/piso_streamer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module piso_streamer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/src/piso_streamer_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module piso_streamer_tb

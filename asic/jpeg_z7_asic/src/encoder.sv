@@ -21,7 +21,7 @@ module encoder
 // The predictor for dc differential coding
 logic [7:0] pred;   // DC predictor
 logic [5:0] pcnt;   // Pixel counter 0..63
-logic [7:0] mcnt;   // MCU counter   0..255 
+logic [7:0] mcnt;   // MCU counter   0..255
 logic       isac;   // Current data is ac component
 
 assign isac = pcnt!='0;
@@ -148,7 +148,7 @@ logic [7:0]  code_bin;
 logic        code_eoi;
 logic        code_valid;
 
-logic [7:0]  code_bin_s; // for debug only
+//logic [7:0]  code_bin_s; // for debug only
 
 always_ff @ (posedge clk, negedge nrst) begin
     if(~nrst) begin
@@ -156,7 +156,7 @@ always_ff @ (posedge clk, negedge nrst) begin
         size_bin   <= '0;
         code_len   <= '0;
         code_bin   <= '0;
-        code_bin_s <= '0;
+        //code_bin_s <= '0;
         code_eoi   <= '0;
         code_valid <= '0;
     end
@@ -168,7 +168,7 @@ always_ff @ (posedge clk, negedge nrst) begin
             code_len   <= hf_ssss;
             code_bin   <= hf_code;
             code_eoi   <= hf_eoi;
-            code_bin_s <= hf_code >> (8'd8-hf_ssss);
+            //code_bin_s <= hf_code >> (8'd8-hf_ssss);
         end
     end
 end

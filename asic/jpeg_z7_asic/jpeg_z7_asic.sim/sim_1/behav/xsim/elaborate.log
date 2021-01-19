@@ -1,0 +1,56 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 2a33651da4bd41f5bce75aba0704a48f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot jpeg_tb_behav xil_defaultlib.jpeg_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "F:/jpeg_encoder/asic/jpeg_z7_asic/jpeg_z7_asic.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ram_8bx128
+Compiling module xil_defaultlib.mcu_default
+Compiling module xil_defaultlib.lead_nz
+Compiling module xil_defaultlib.int8_to_float
+Compiling module xil_defaultlib.level_shift_default
+Compiling module xil_defaultlib.dct_lut
+Compiling module xil_defaultlib.shift_reg(STAGE=14)
+Compiling module xil_defaultlib.shift_reg(WIDTH=1,STAGE=15)
+Compiling module xil_defaultlib.booth_algo(WIDTH=26)
+Compiling module xil_defaultlib.booth_algo(WIDTH=26,BSTEP=1)
+Compiling module xil_defaultlib.booth_algo(WIDTH=26,BSTEP=2)
+Compiling module xil_defaultlib.booth_algo(WIDTH=26,BSTEP=3)
+Compiling module xil_defaultlib.booth_algo(WIDTH=26,BSTEP=4)
+Compiling module xil_defaultlib.booth_algo(WIDTH=26,BSTEP=5)
+Compiling module xil_defaultlib.booth_algo(WIDTH=26,BSTEP=6)
+Compiling module xil_defaultlib.booth_algo(WIDTH=26,BSTEP=7)
+Compiling module xil_defaultlib.booth_algo(WIDTH=26,BSTEP=8)
+Compiling module xil_defaultlib.booth_algo(WIDTH=26,BSTEP=9)
+Compiling module xil_defaultlib.booth_algo(WIDTH=26,BSTEP=10)
+Compiling module xil_defaultlib.booth_algo(WIDTH=26,BSTEP=11)
+Compiling module xil_defaultlib.booth_algo(WIDTH=26,BSTEP=12)
+Compiling module xil_defaultlib.fixed_mul_nb_default
+Compiling module xil_defaultlib.float_mul_nb
+Compiling module xil_defaultlib.lead_nz(WIDTH=28)
+Compiling module xil_defaultlib.float_add_nb
+Compiling module xil_defaultlib.dot_pro_default
+Compiling module xil_defaultlib.shift_reg(STAGE=26)
+Compiling module xil_defaultlib.shift_reg(WIDTH=1,STAGE=26)
+Compiling module xil_defaultlib.fixed_div_nb(WIDTH=25,STEPS=25)
+Compiling module xil_defaultlib.float_div_nb
+Compiling module xil_defaultlib.float_to_int8
+Compiling module xil_defaultlib.qnt
+Compiling module xil_defaultlib.fdct
+Compiling module xil_defaultlib.ram_8bx64
+Compiling module xil_defaultlib.zigzag
+Compiling module xil_defaultlib.rle
+Compiling module xil_defaultlib.en_magn
+Compiling module xil_defaultlib.dc_lut
+Compiling module xil_defaultlib.ac_lut
+Compiling module xil_defaultlib.conc_bytes
+Compiling module xil_defaultlib.encoder
+Compiling module xil_defaultlib.piso_streamer
+Compiling module xil_defaultlib.jpeg
+Compiling module xil_defaultlib.jpeg_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot jpeg_tb_behav

@@ -137,8 +137,8 @@ always_ff @ (posedge clk, negedge nrst)
     else
         rod_valid <= fix_valid;
 
-always_ff @ (posedge clk)
-    if(fix_valid) begin
+always_ff @ (posedge clk) begin
+    //if(fix_valid) begin
         rod_man  <= rod_fix[47:25];
         rod_exp  <= fix_pro[47] ? exp_int + 8'd1 : exp_int;
         rod_zero <= fix_pro=='0;
@@ -162,8 +162,8 @@ always_ff @ (posedge clk, negedge nrst)
         
 assign norm_man_int = {1'b0, rod_man} + rod_up;
 
-always_ff @ (posedge clk)
-    if(rod_valid) begin
+always_ff @ (posedge clk) begin
+    //if(rod_valid) begin
         norm_sig  <= rod_zero ? '0 : sig_int;
         norm_exp  <= rod_zero ? '0 : rod_exp + norm_man_int[23];
         norm_man  <= rod_zero ? '0 : norm_man_int[22:0];

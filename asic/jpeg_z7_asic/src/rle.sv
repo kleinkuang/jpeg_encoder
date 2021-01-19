@@ -58,7 +58,7 @@ end
 
 // Run length encoding
 // - if last data is zero, output EOB (0,0)
-assign rrrr_int = cnt_pixel=='1 &  data=='0 ? '0 : cnt_zeros;
+assign rrrr_int = cnt_pixel=='1 & data=='0 ? '0 : cnt_zeros;
 assign magn_int = data;
 // - valid if
 //   a) data is not zero

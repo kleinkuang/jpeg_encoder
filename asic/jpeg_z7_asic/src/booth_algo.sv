@@ -80,22 +80,20 @@ assign din_multiplicand_2s = to_2s ? ~din_multiplicand_ex + 1 : din_multiplicand
 assign din_multiplicand_sf = din_multiplicand_2s << to_sf;
 
 always_ff @ (posedge clk)
-    if(din_valid)
-        dout_addend <= to_do ? din_multiplicand_sf : '0;
+    //if(din_valid)
+    dout_addend <= to_do ? din_multiplicand_sf : '0;
 
 // ----------------------------------------------------------------
 // Addition and Output Buffering
 // ----------------------------------------------------------------
 always_ff @ (posedge clk, negedge nrst)
-    if(~nrst) begin
+    if(~nrst)
         dout_valid <= '0;
-    end
-    else begin
+    else
         dout_valid <= din_valid;
-    end
     
-always_ff @ (posedge clk)
-    if(din_valid) begin
+always_ff @ (posedge clk) begin
+    //if(din_valid) begin
         // Addition
         dout_augend <= {din_augend[WIDTH-1], din_augend[WIDTH-1], din_augend} + din_addend;
         // Output

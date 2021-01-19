@@ -8,7 +8,8 @@ module jpeg_uart
     input  logic        clk,
     input  logic        rst,
     // User interface
-    input  logic        loopback,
+    //input  logic        loopback,
+    input  logic [1:0]  mux_out,
     // Physical interface
     output logic        TX,
     input  logic        RX,
@@ -37,7 +38,7 @@ logic        rx_valid;
 logic [7:0]  rx_data;
 
 logic        tx_valid;
-logic [31:0] tx_data;
+logic [7:0]  tx_data;
 logic        tx_full;
 
 uart_tx_rx uart_inst
@@ -45,7 +46,7 @@ uart_tx_rx uart_inst
     .sys_clk  (sys_clk),
     .sys_nrst (sys_nrst),
     // User interface
-    .lp_mode  (loopback),    // 1: Loopback Mode
+    .lp_mode  ('0),    // 1: Loopback Mode
     // - TX
     .tx_valid (tx_valid),
     .tx_data  (tx_data),
@@ -62,32 +63,26 @@ uart_tx_rx uart_inst
 // ----------------------------------------------------------------
 // JPEG
 // ----------------------------------------------------------------
+logic jpeg_full;
+
 jpeg jpeg_inst
 (
     .clk        (sys_clk),
     .nrst       (sys_nrst),
+    .mux_in     ('0),
+    .mux_out    (mux_out),
     .din        (rx_data),
     .din_valid  (rx_valid),
     .dout       (tx_data),
-    .dout_valid (tx_valid)
+    .dout_valid (tx_valid),
+    .full       (jpeg_full)
 );
-
-// LED
-logic full_lock;
-
-always_ff @ (posedge sys_clk, negedge sys_nrst)
-    if(~sys_nrst)
-        full_lock <= '0;
-    else
-        if(~full_lock)
-            if(tx_full=='0)
-                full_lock <= '1;
 
 always_ff @ (posedge sys_clk, negedge sys_nrst)
     if(~sys_nrst)
         LED <= '0;
     else
-        if(LED=='0 & tx_full & full_lock)
+        if(LED=='0 & (jpeg_full | tx_full))
             LED <= '1;
 
 endmodule

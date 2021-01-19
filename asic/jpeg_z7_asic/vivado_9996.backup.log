@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Jan 19 23:22:50 2021
+# Process ID: 9996
+# Current directory: F:/jpeg_encoder/asic/jpeg_z7_asic
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24384 F:\jpeg_encoder\asic\jpeg_z7_asic\jpeg_z7_asic.xpr
+# Log file: F:/jpeg_encoder/asic/jpeg_z7_asic/vivado.log
+# Journal file: F:/jpeg_encoder/asic/jpeg_z7_asic\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/jpeg_encoder/asic/jpeg_z7_asic/jpeg_z7_asic.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 19 23:25:17 2021...

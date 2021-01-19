@@ -1,0 +1,59 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_z7_asic/src/ac_lut.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ac_lut
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_z7_asic/src/booth_algo.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module booth_algo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_z7_asic/src/conc_bytes.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conc_bytes
+INFO: [VRFC 10-2458] undeclared symbol conc_valid, assumed default net type wire [F:/jpeg_encoder/asic/jpeg_z7_asic/src/conc_bytes.sv:93]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_z7_asic/src/dc_lut.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dc_lut
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_z7_asic/src/dct_lut.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dct_lut
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_z7_asic/src/dot_pro.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dot_pro
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_z7_asic/src/en_magn.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module en_magn
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_z7_asic/src/encoder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encoder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_z7_asic/src/fdct.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fdct
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_z7_asic/src/fixed_div_nb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fixed_div_nb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_z7_asic/src/fixed_mul_nb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fixed_mul_nb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_z7_asic/src/float_add_nb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module float_add_nb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_z7_asic/src/float_div_nb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module float_div_nb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_z7_asic/src/float_mul_nb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module float_mul_nb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_z7_asic/src/float_to_int8.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module float_to_int8
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_z7_asic/src/int8_to_float.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module int8_to_float
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_z7_asic/src/jpeg.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module jpeg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_z7_asic/src/lead_nz.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lead_nz
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_z7_asic/src/level_shift.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module level_shift
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_z7_asic/src/mcu.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mcu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_z7_asic/src/piso_streamer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module piso_streamer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_z7_asic/src/qnt.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module qnt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_z7_asic/src/ram_8bx128.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_8bx128
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_z7_asic/src/ram_8bx64.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_8bx64
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_z7_asic/src/rle.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rle
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_z7_asic/src/shift_reg.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module shift_reg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_z7_asic/src/zigzag.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module zigzag
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_z7_asic/src/tb/jpeg_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module jpeg_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/jpeg_encoder/asic/jpeg_z7_asic/jpeg_z7_asic.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

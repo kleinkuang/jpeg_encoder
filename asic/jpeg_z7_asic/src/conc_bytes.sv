@@ -51,7 +51,7 @@ logic        in_app_reg_valid;
 logic        in_app_reg_eoi;
 
 // in_len[2:0] - sfin_len + app1s_len = 8
-assign app1s_len = sfin_len[2:0] + 4'd8 - in_len[2:0];
+assign app1s_len = sfin_len[2:0] - in_len[2:0]; // + 4'd8 ;
 assign app1s_bin = 24'b1111_1111_1111_1111_1111_1111;
 
 // Output register

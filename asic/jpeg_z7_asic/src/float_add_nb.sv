@@ -78,8 +78,8 @@ always_ff @ (posedge clk, negedge nrst)
     else
         in_valid <= din_valid;
 
-always_ff @ (posedge clk)
-    if(din_valid) begin
+always_ff @ (posedge clk) begin
+    //if(din_valid) begin
         in_sig   <= in_exchg ? sig2 : sig1;
         in_sigx  <= sig1 ^ sig2;
         in_exp   <= in_exchg ? exp2 : exp1;
@@ -110,8 +110,8 @@ always_ff @ (posedge clk, negedge nrst)
     else
         sf_valid <= in_valid;
 
-always_ff @ (posedge clk)
-    if(in_valid) begin
+always_ff @ (posedge clk) begin
+    //if(in_valid) begin
         sf_sig   <= in_sig;
         sf_sigx  <= in_sigx;
         sf_exp   <= in_exp;
@@ -134,8 +134,8 @@ always_ff @ (posedge clk, negedge nrst)
     else
         pre_valid <= sf_valid;
 
-always_ff @ (posedge clk)
-    if(sf_valid) begin
+always_ff @ (posedge clk) begin
+    //if(sf_valid) begin
         pre_sig    <= sf_sig;
         pre_exp    <= sf_exp;
         pre_augend <= {2'b0, sf_man1, 3'b0};
@@ -156,8 +156,8 @@ always_ff @ (posedge clk, negedge nrst)
     else
         add_valid <= pre_valid;
 
-always_ff @ (posedge clk)
-    if(pre_valid) begin
+always_ff @ (posedge clk) begin
+    //if(pre_valid) begin
         add_sig  <= pre_sig;
         add_exp  <= pre_exp;
         add_sum  <= pre_augend + pre_addend;
@@ -181,8 +181,8 @@ always_ff @ (posedge clk, negedge nrst)
     else
         post_valid <= add_valid;
 
-always_ff @ (posedge clk)
-    if(add_valid) begin
+always_ff @ (posedge clk) begin
+    //if(add_valid) begin
         post_sig <= add_sig ^ post_inv_int;
         post_exp <= add_exp;
         post_sum <= post_inv_int ? (~add_sum + 29'd1) : add_sum;
@@ -222,8 +222,8 @@ always_ff @ (posedge clk, negedge nrst)
     else
         rod_valid <= post_valid;
 
-always_ff @ (posedge clk)
-    if(post_valid) begin
+always_ff @ (posedge clk) begin
+    //if(post_valid) begin
         rod_sig  <= post_sig;
         rod_zero <= post_sum=='0;
         rod_exp  <= (post_exp - rod_lnz_int[4:0] + 8'd1);
@@ -247,8 +247,8 @@ always_ff @ (posedge clk, negedge nrst)
     else
         dout_valid <= rod_valid;
 
-always_ff @ (posedge clk)
-    if(rod_valid) begin
+always_ff @ (posedge clk) begin
+    //if(rod_valid) begin
         norm_sig  <= rod_zero ? '0 : rod_sig;
         norm_exp  <= rod_zero ? '0 : rod_exp + norm_man_int[23];
         norm_man  <= rod_zero ? '0 : norm_man_int[22:0];

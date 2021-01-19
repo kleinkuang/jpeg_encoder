@@ -57,7 +57,7 @@
 fifo_uart_tx your_instance_name (
   .clk(clk),      // input wire clk
   .rst(rst),      // input wire rst
-  .din(din),      // input wire [31 : 0] din
+  .din(din),      // input wire [7 : 0] din
   .wr_en(wr_en),  // input wire wr_en
   .rd_en(rd_en),  // input wire rd_en
   .dout(dout),    // output wire [7 : 0] dout

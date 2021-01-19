@@ -81,10 +81,14 @@ def jpeg_baseline(img, show=False):
             # - Forward discrete cosine transform
             # --------------------------------
             img_dct = np.dot(dct_mat, mcu_ls)
+            if(False):
+                print('\n# FDCT - AF:')
+                print(img_dct)
+            
             img_dct = np.dot(img_dct, dct_mat.T)
 
             if(False):
-                print('\n# FDCT:')
+                print('\n# FDCT - AFA:')
                 print(img_dct)
             
             # --------------------------------
@@ -92,7 +96,7 @@ def jpeg_baseline(img, show=False):
             # --------------------------------
             img_q50 = img_dct / Q50
             
-            if(False):
+            if(True):
                 print('\n# Quantized:')
                 print(img_q50)
             
@@ -101,7 +105,7 @@ def jpeg_baseline(img, show=False):
             # --------------------------------
             img_rod = np.round(img_q50)
             
-            if(False):
+            if(True):
                 print('\n# Round:')
                 print(img_rod)
             
@@ -119,7 +123,7 @@ def jpeg_baseline(img, show=False):
             img_zig = zigzag(img_rod)
             zig_list.append(img_zig)
             
-            if(True):
+            if(False):
                 print('\n# Zigzag:')
                 print(img_zig.reshape(8, 8))
                 print(img_zig)
@@ -129,7 +133,7 @@ def jpeg_baseline(img, show=False):
             # --------------------------------
             (dc, ac) = mcu_rle(img_zig)
 
-            if(True):
+            if(False):
                 print('\n# RLE:')
                 print('- DC: %d' % (dc-dc_pre))
                 print('- AC:', ac)
@@ -144,7 +148,7 @@ def jpeg_baseline(img, show=False):
             for ac_tuple in ac:
                 ac_code.append(encode_ac(ac_tuple))
 
-            if(True):
+            if(False):
                 print('\n# Huffman encoding:')
                 print('- DC:', dc_code)
                 print('- AC:', ac_code)
@@ -224,7 +228,14 @@ if __name__ == "__main__":
 
     # Start
     # - Test image
-    img = plt.imread('./blackpearl/bmp/batman_231.bmp', 0)
+    img = plt.imread('./blackpearl/bmp/batman_1.bmp', 0)
+
+    p_cnt = 0
+    for row in img:
+        for col in row:
+            print('assign img[%5d] = %d;' % (p_cnt, col))
+            p_cnt = p_cnt + 1
+    
     #img = plt.imread('./golden/MCUs/10_10.bmp', 0)
     #img = plt.imread('./golden/MCUs/13_6.bmp', 0)
-    jpeg_baseline(img, True)
+    #jpeg_baseline(img, True)

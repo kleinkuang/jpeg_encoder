@@ -11,7 +11,7 @@ from jpeg_func  import *
 
 import matplotlib.pyplot as plt
 
-def jpeg_baseline(img, show=False):
+def jpeg_baseline(img, out_path, show=False):
     # --------------------------------
     # Input Image
     # --------------------------------
@@ -197,7 +197,7 @@ def jpeg_baseline(img, show=False):
     # --------------------------------
     # Write File
     # --------------------------------
-    jpeg = open("out.jpeg", 'wb')
+    jpeg = open(out_path, 'wb')
     jpeg.write(jpeg_hex)
     jpeg.close()
             
@@ -207,5 +207,7 @@ if __name__ == "__main__":
 
     # Start
     # - Test image
-    img = plt.imread('./demo/batman_3090_raw.bmp', 0)
-    jpeg_baseline(img, True)
+    #img = plt.imread('./demo/batman_3090_raw.bmp', 0)
+    #img = plt.imread('./lena/lena_128x128.bmp', 0)
+    img = plt.imread('./legolas/bmp/88.bmp', 0)
+    jpeg_baseline(img, "out.jpeg", True)

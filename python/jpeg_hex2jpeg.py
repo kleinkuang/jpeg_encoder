@@ -9,7 +9,7 @@ head = file.read()
 file.close()
 
 # Open Hex (Hex string printed from systemverilog)
-file = open("hex_example.txt", "r")
+file = open("hex_example_.txt", "r")
 txt  = file.read()
 file.close()
 

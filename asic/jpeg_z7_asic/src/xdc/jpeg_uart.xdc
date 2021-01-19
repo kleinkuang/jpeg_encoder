@@ -21,9 +21,10 @@ set_property PACKAGE_PIN D19                    [get_ports rst]
 
 # Switches
 # - SW0
-set_property IOSTANDARD LVCMOS33                [get_ports loopback]
-set_property PACKAGE_PIN M20                    [get_ports loopback]
-#set_property -dict { PACKAGE_PIN M19    IOSTANDARD LVCMOS33 } [get_ports { sw[1] }]; #IO_L7P_T1_AD2P_35 Sch=SW1
+set_property IOSTANDARD LVCMOS33                [get_ports {mux_out[1]}]
+set_property PACKAGE_PIN M19                    [get_ports {mux_out[1]}]
+set_property IOSTANDARD LVCMOS33                [get_ports {mux_out[0]}]
+set_property PACKAGE_PIN M20                    [get_ports {mux_out[0]}]
 
 # LEDs
 # - LED0

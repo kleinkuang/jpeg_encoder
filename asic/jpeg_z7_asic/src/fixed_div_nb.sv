@@ -41,8 +41,8 @@ generate
                 else
                     div_valid[i] <= din_valid;
             
-            always_ff @ (posedge clk)
-                if(din_valid) begin
+            always_ff @ (posedge clk) begin
+                //if(din_valid) begin
                     div_end[i+1] <= div_sig[i] ? (dividend<<1) : (div_dif[i]<<1);
                     div_sor[i+1] <= divisor;
                     div_quo[i]   <= {~div_sig[i]};
@@ -58,8 +58,8 @@ generate
                 else
                     div_valid[i] <= div_valid[i-1];
 
-            always_ff @ (posedge clk)
-                if(div_valid[i-1]) begin
+            always_ff @ (posedge clk) begin
+                //if(div_valid[i-1]) begin
                     if(i!=STEPS-1) begin
                         div_end[i+1] <= div_sig[i] ? (div_end[i]<<1) : (div_dif[i]<<1);
                         div_sor[i+1] <= div_sor[i];

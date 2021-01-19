@@ -51,7 +51,7 @@ always_ff @ (posedge clk, negedge nrst)
         dout_valid <= din_valid;
         
 always_ff @ (posedge clk)
-    if(din_valid)
+    //if(din_valid)
         dout <= int8;
 
 endmodule

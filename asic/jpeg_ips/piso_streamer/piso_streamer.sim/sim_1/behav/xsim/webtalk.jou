@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Dec 14 12:15:57 2020
+# Process ID: 6316
+# Current directory: F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/piso_streamer.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/piso_streamer.sim/sim_1/behav/xsim/xsim.dir/piso_streamer_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/piso_streamer.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/piso_streamer.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/piso_streamer.sim/sim_1/behav/xsim/xsim.dir/piso_streamer_tb_behav/webtalk/xsim_webtalk.tcl -notrace

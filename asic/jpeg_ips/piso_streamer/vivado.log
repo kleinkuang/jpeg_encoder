@@ -1,0 +1,229 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Dec 14 13:31:06 2020
+# Process ID: 23304
+# Current directory: F:/jpeg_encoder/asic/jpeg_ips/piso_streamer
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17756 F:\jpeg_encoder\asic\jpeg_ips\piso_streamer\piso_streamer.xpr
+# Log file: F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/vivado.log
+# Journal file: F:/jpeg_encoder/asic/jpeg_ips/piso_streamer\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/piso_streamer.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/piso_streamer.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'piso_streamer_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/piso_streamer.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj piso_streamer_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/src/piso_streamer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module piso_streamer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/src/piso_streamer_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module piso_streamer_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/piso_streamer.sim/sim_1/behav/xsim'
+"xelab -wto 70b6bbad72064492955420e8ac12d101 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot piso_streamer_tb_behav xil_defaultlib.piso_streamer_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 70b6bbad72064492955420e8ac12d101 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot piso_streamer_tb_behav xil_defaultlib.piso_streamer_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/piso_streamer.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.piso_streamer
+Compiling module xil_defaultlib.piso_streamer_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot piso_streamer_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/piso_streamer.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "piso_streamer_tb_behav -key {Behavioral:sim_1:Functional:piso_streamer_tb} -tclbatch {piso_streamer_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source piso_streamer_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'piso_streamer_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 834.262 ; gain = 0.000
+run 10 us
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 857.555 ; gain = 0.000
+run 10 us
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/piso_streamer.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'piso_streamer_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/piso_streamer.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj piso_streamer_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/src/piso_streamer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module piso_streamer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/src/piso_streamer_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module piso_streamer_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/piso_streamer.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/piso_streamer.sim/sim_1/behav/xsim'
+"xelab -wto 70b6bbad72064492955420e8ac12d101 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot piso_streamer_tb_behav xil_defaultlib.piso_streamer_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 70b6bbad72064492955420e8ac12d101 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot piso_streamer_tb_behav xil_defaultlib.piso_streamer_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/piso_streamer.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.piso_streamer
+Compiling module xil_defaultlib.piso_streamer_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot piso_streamer_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 857.555 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/piso_streamer.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'piso_streamer_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/piso_streamer.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj piso_streamer_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/src/piso_streamer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module piso_streamer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/src/piso_streamer_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module piso_streamer_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/piso_streamer.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/piso_streamer.sim/sim_1/behav/xsim'
+"xelab -wto 70b6bbad72064492955420e8ac12d101 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot piso_streamer_tb_behav xil_defaultlib.piso_streamer_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 70b6bbad72064492955420e8ac12d101 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot piso_streamer_tb_behav xil_defaultlib.piso_streamer_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/piso_streamer.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.piso_streamer
+Compiling module xil_defaultlib.piso_streamer_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot piso_streamer_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 857.555 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/piso_streamer.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'piso_streamer_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/piso_streamer.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj piso_streamer_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/src/piso_streamer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module piso_streamer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/src/piso_streamer_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module piso_streamer_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/piso_streamer.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/piso_streamer.sim/sim_1/behav/xsim'
+"xelab -wto 70b6bbad72064492955420e8ac12d101 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot piso_streamer_tb_behav xil_defaultlib.piso_streamer_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 70b6bbad72064492955420e8ac12d101 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot piso_streamer_tb_behav xil_defaultlib.piso_streamer_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/piso_streamer.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.piso_streamer
+Compiling module xil_defaultlib.piso_streamer_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot piso_streamer_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 857.555 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart: Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 857.555 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/piso_streamer.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'piso_streamer_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/piso_streamer.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj piso_streamer_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/src/piso_streamer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module piso_streamer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/src/piso_streamer_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module piso_streamer_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/piso_streamer.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/piso_streamer.sim/sim_1/behav/xsim'
+"xelab -wto 70b6bbad72064492955420e8ac12d101 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot piso_streamer_tb_behav xil_defaultlib.piso_streamer_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 70b6bbad72064492955420e8ac12d101 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot piso_streamer_tb_behav xil_defaultlib.piso_streamer_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "F:/jpeg_encoder/asic/jpeg_ips/piso_streamer/piso_streamer.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.piso_streamer
+Compiling module xil_defaultlib.piso_streamer_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot piso_streamer_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 857.555 ; gain = 0.000
+run 10 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 14 22:09:23 2020...

@@ -16,14 +16,17 @@ import matplotlib.pyplot as plt
 #     buffered in the system, thus last few images will not be readout
 
 # !!! Reset is required for each round !!!
-BATMAN_START    = 1
-BATMAN_END      = 5002
-BATMAN_INTERVAL = 1
+PATH     = './blackpearl'
+NAME     = 'batman_'
+START    = 1
+END      = 5000
+INTERVAL = 100
+COM_PORT = 'COM4'
 
 if __name__ == "__main__" :
     
     # Open Serial
-    serial_obj = serial.Serial('COM22', baudrate = 115200, timeout=30)
+    serial_obj = serial.Serial(COM_PORT, baudrate = 115200, timeout=30)
     if(not serial_obj):
         print("Error: Reconnect Serial ?")
         
@@ -34,15 +37,17 @@ if __name__ == "__main__" :
     
     # Init
     print()
-    print('%8s%8s' % ('CR : 1', 'PSNR'))
-    jpeg_wr_cnt = BATMAN_START
-
-    # Read BlackPearl Images from ./blackpearl/bmp
+    print('%8s %8s %8s' % ('No.', 'CR : 1', 'PSNR'))
+    
+    jpeg_wr_cnt = START
+    
+    # Read Images
     ip_read = b''
     all_read = b''
-    for n in range(BATMAN_START, BATMAN_END, BATMAN_INTERVAL):
+    
+    for n in range(START, END, INTERVAL):
         # Read .bmp
-        img = plt.imread('./blackpearl/bmp/batman_%d.bmp' % n, 0).astype(np.uint8)
+        img = plt.imread(PATH + '/bmp/' + NAME + '%d.bmp' % n, 0).astype(np.uint8)
 
         # Stream to IP through UART
         for row in img:
@@ -57,10 +62,10 @@ if __name__ == "__main__" :
         
         # ----------------------------------------------------------------------------------------------------------------------
         # Check if JPEG file available
-        flag = b'\x00\x00\x00\x00'
+        flag = b'\x00\x00\x00\x00\x00\x00'
         if(flag in ip_read):
             # Get bin ----------------------------------------------------------------------------------------------------------
-            bin_index = ip_read.find(flag) + 4
+            bin_index = ip_read.find(flag) + 6
             jpeg_bin  = ip_read[:bin_index]
 
             # Delete from read -------------------------------------------------------------------------------------------------
@@ -88,29 +93,32 @@ if __name__ == "__main__" :
             
             # Write jpeg file --------------------------------------------------------------------------------------------------
             try:
-                file = open("./blackpearl/jpeg/batman_%d.jpeg" % jpeg_wr_cnt, 'wb')
+                file = open(PATH + '/fpga/' + NAME + '%d.jpeg' % jpeg_wr_cnt, 'wb')
             except:
-                os.mkdir('./blackpearl/jpeg')
-                file = open("./blackpearl/jpeg/batman_%d.jpeg" % jpeg_wr_cnt, 'wb')
+                os.mkdir(PATH + '/fpga')
+                file = open(PATH + '/fpga/' + NAME + '%d.jpeg' % jpeg_wr_cnt, 'wb')
             file.write(jpeg)
             file.close()
 
             # Compression ratio and psrr ---------------------------------------------------------------------------------------
-            bmp_size = os.path.getsize("./blackpearl/bmp/batman_%d.bmp" % jpeg_wr_cnt)
-            jpg_size = os.path.getsize("./blackpearl/jpeg/batman_%d.jpeg" % jpeg_wr_cnt)
+            bmp_size = os.path.getsize(PATH + '/bmp/' + NAME + '%d.bmp' % jpeg_wr_cnt)
+            jpg_size = os.path.getsize(PATH + '/fpga/' + NAME + '%d.jpeg' % jpeg_wr_cnt)
             #print("Image %8d:" % jpeg_wr_cnt)
             #print("- CR   : %6.4f:1" % (bmp_size / jpg_size))
             
-            bmp  = cv2.imread("./blackpearl/bmp/batman_%d.bmp" % jpeg_wr_cnt)
-            jpg  = cv2.imread("./blackpearl/jpeg/batman_%d.jpeg" % jpeg_wr_cnt)
+            bmp  = cv2.imread(PATH + '/bmp/' + NAME + '%d.bmp' % jpeg_wr_cnt)
+            jpg  = cv2.imread(PATH + '/fpga/' + NAME + '%d.jpeg' % jpeg_wr_cnt)
             psnr = cv2.PSNR(bmp, jpg)
             #print("- PSNR : %f" % psnr)
-            print('%8.3f%8.3f' % (bmp_size / jpg_size, psnr))
-
-            # Loop counter
-            jpeg_wr_cnt = jpeg_wr_cnt + 1
+            print('%8d,%8.3f,%8.3f' % (jpeg_wr_cnt, bmp_size / jpg_size, psnr))
             
-    # Display hex string
+            if(psnr<15):
+                print('Error')
+                raise SystemError
+                
+            jpeg_wr_cnt = jpeg_wr_cnt + INTERVAL
+            
+#    # Display hex string
 #    for n in range(0, len(all_read)-4, 4):
 #        (num,  ) = struct.unpack('>I', all_read[n:n+4])
 #        print(hex(num)[2:].zfill(8))

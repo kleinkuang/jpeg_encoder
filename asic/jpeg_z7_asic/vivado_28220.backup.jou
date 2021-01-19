@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Jan 18 20:19:52 2021
+# Process ID: 28220
+# Current directory: F:/jpeg_encoder/asic/jpeg_z7_asic
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17928 F:\jpeg_encoder\asic\jpeg_z7_asic\jpeg_z7_asic.xpr
+# Log file: F:/jpeg_encoder/asic/jpeg_z7_asic/vivado.log
+# Journal file: F:/jpeg_encoder/asic/jpeg_z7_asic\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/jpeg_encoder/asic/jpeg_z7_asic/jpeg_z7_asic.xpr
+update_compile_order -fileset sources_1

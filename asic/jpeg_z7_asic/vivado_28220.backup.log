@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Jan 18 20:19:52 2021
+# Process ID: 28220
+# Current directory: F:/jpeg_encoder/asic/jpeg_z7_asic
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17928 F:\jpeg_encoder\asic\jpeg_z7_asic\jpeg_z7_asic.xpr
+# Log file: F:/jpeg_encoder/asic/jpeg_z7_asic/vivado.log
+# Journal file: F:/jpeg_encoder/asic/jpeg_z7_asic\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/jpeg_encoder/asic/jpeg_z7_asic/jpeg_z7_asic.xpr
+Scanning sources...
+Finished scanning sources
+CRITICAL WARNING: [Board 49-67] The board_part definition was not found for digilentinc.com:arty-z7-20:part0:1.0. This can happen sometimes when you use custom board part. You can resolve this issue by setting 'board.repoPaths' parameter, pointing to the location of custom board files. Valid board_part values can be retrieved with the 'get_board_parts' Tcl command.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+WARNING: [IP_Flow 19-2162] IP 'clk_div' is locked:
+* This IP has board specific outputs. Current project board 'unset' and the board 'digilentinc.com:arty-z7-20:part0:1.0' used to customize the IP 'clk_div' do not match.
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Jan 18 20:22:10 2021...

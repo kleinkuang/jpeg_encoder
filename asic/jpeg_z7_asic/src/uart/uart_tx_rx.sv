@@ -15,7 +15,7 @@ module uart_tx_rx
     input  logic        lp_mode,    // 1: Loopback Mode
     // - TX
     input  logic        tx_valid,
-    input  logic [31:0] tx_data,
+    input  logic [7:0]  tx_data,
     output logic        tx_full,
     input  logic        tx_en,
     // - RX

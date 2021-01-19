@@ -152,25 +152,27 @@ def encode_ac(ac_tuple, show=False):
     
 # DC+AC Code to Bytes
 # (size, code)
-def code2bytes(code_list, byte_list, byte_left, end=False):
+def code2bytes(code_list, byte_list, byte_left, end=False, show=False):
     for code_tuple in code_list:
         for (size, code) in code_tuple:
             byte_left = [byte_left[0]+size, (byte_left[1]<<size) | code]
             while(byte_left[0]>=8):
                 uint8 = np.uint8((byte_left[1] >> (byte_left[0] - 8)))
-                print(hex(uint8)[2:].upper().zfill(2) + ' ', end='')
+                if(show):
+                    print(hex(uint8)[2:].upper().zfill(2) + ' ', end='')
                 byte_left[0] = byte_left[0] - 8
                 byte_list.append(uint8.tobytes())
                 # - F.1.2.3 Byte stuffing
                 if(uint8==255):
                     byte_list.append(b'\x00')
-    print()
+    if(show):
+        print()
     return (byte_list, byte_left)
 
 if __name__ == "__main__":
-    #encode_dc(-255, 0, True)
+    encode_dc(-78, 0, True)
     #encode_ac((0, 0), True)
     #print(check_zeros([1, 0, 0, 0, 0, 0], 1))
     #print(np.around(dct_matrix_gen(8), 8))
-    print(mcu_rle([57,-3,-1,5,0,-4,-3,0,1,0,-3,0,2,0,-1,0,0,2,0,0,0,1,-1,-1,1,1,0,0,0,0,0,0,-1,0,0,0,0,0,-1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0]))
+    #print(mcu_rle([57,-3,-1,5,0,-4,-3,0,1,0,-3,0,2,0,-1,0,0,2,0,0,0,1,-1,-1,1,1,0,0,0,0,0,0,-1,0,0,0,0,0,-1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0]))
     

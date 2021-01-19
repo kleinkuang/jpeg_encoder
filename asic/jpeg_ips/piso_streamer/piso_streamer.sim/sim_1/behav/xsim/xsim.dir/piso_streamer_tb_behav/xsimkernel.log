@@ -1,0 +1,7 @@
+Running: xsim.dir/piso_streamer_tb_behav/xsimk.exe -simmode gui -wdb piso_streamer_tb_behav.wdb -simrunnum 0 -socket 10089
+Design successfully loaded
+Design Loading Memory Usage: 5412 KB (Peak: 5412 KB)
+Design Loading CPU Usage: 46 ms
+Simulation completed
+Simulation Memory Usage: 6216 KB (Peak: 6216 KB)
+Simulation CPU Usage: 46 ms

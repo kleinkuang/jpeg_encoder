@@ -16,12 +16,11 @@ import matplotlib.pyplot as plt
 #     buffered in the system, thus last few images will not be readout
 
 # !!! Reset is required for each round !!!
-PATH     = './blackpearl'
-NAME     = 'batman_'
+PATH     = './img_input'
 START    = 1
-END      = 5000
-INTERVAL = 100
-COM_PORT = 'COM4'
+END      = 215
+INTERVAL = 1
+COM_PORT = 'COM6'
 
 if __name__ == "__main__" :
     
@@ -34,7 +33,7 @@ if __name__ == "__main__" :
     file        = open("header_128x128.hex", "rb")
     jpeg_header = file.read()
     file.close()
-    
+
     # Init
     print()
     print('%8s %8s %8s' % ('No.', 'CR : 1', 'PSNR'))
@@ -47,7 +46,7 @@ if __name__ == "__main__" :
     
     for n in range(START, END, INTERVAL):
         # Read .bmp
-        img = plt.imread(PATH + '/bmp/' + NAME + '%d.bmp' % n, 0).astype(np.uint8)
+        img = plt.imread(PATH + '/bmp/' + 'img (%d).bmp' % n, 0).astype(np.uint8)
 
         # Stream to IP through UART
         for row in img:
@@ -93,21 +92,21 @@ if __name__ == "__main__" :
             
             # Write jpeg file --------------------------------------------------------------------------------------------------
             try:
-                file = open(PATH + '/fpga/' + NAME + '%d.jpeg' % jpeg_wr_cnt, 'wb')
+                file = open(PATH + '/fpga/' + 'img (%d).jpeg' % jpeg_wr_cnt, 'wb')
             except:
                 os.mkdir(PATH + '/fpga')
-                file = open(PATH + '/fpga/' + NAME + '%d.jpeg' % jpeg_wr_cnt, 'wb')
+                file = open(PATH + '/fpga/' + 'img (%d).jpeg' % jpeg_wr_cnt, 'wb')
             file.write(jpeg)
             file.close()
 
             # Compression ratio and psrr ---------------------------------------------------------------------------------------
-            bmp_size = os.path.getsize(PATH + '/bmp/' + NAME + '%d.bmp' % jpeg_wr_cnt)
-            jpg_size = os.path.getsize(PATH + '/fpga/' + NAME + '%d.jpeg' % jpeg_wr_cnt)
+            bmp_size = os.path.getsize(PATH + '/bmp/' + 'img (%d).bmp' % jpeg_wr_cnt)
+            jpg_size = os.path.getsize(PATH + '/fpga/' + 'img (%d).jpeg' % jpeg_wr_cnt)
             #print("Image %8d:" % jpeg_wr_cnt)
             #print("- CR   : %6.4f:1" % (bmp_size / jpg_size))
             
-            bmp  = cv2.imread(PATH + '/bmp/' + NAME + '%d.bmp' % jpeg_wr_cnt)
-            jpg  = cv2.imread(PATH + '/fpga/' + NAME + '%d.jpeg' % jpeg_wr_cnt)
+            bmp  = cv2.imread(PATH + '/bmp/' + 'img (%d).bmp' % jpeg_wr_cnt)
+            jpg  = cv2.imread(PATH + '/fpga/' + 'img (%d).jpeg' % jpeg_wr_cnt)
             psnr = cv2.PSNR(bmp, jpg)
             #print("- PSNR : %f" % psnr)
             print('%8d,%8.3f,%8.3f' % (jpeg_wr_cnt, bmp_size / jpg_size, psnr))

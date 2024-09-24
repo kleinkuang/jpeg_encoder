@@ -17,7 +17,10 @@ def jpeg_baseline(img, out_path, show=False):
     # --------------------------------
     img = np.array(img).astype(np.int16)
     
-    if(False):
+    print(img.shape)
+    img = img[:, :, 1]
+    
+    if(True):
         plt.imshow(img, cmap='gray',  vmin=0,  vmax=255)
         plt.show()
 
@@ -209,5 +212,5 @@ if __name__ == "__main__":
     # - Test image
     #img = plt.imread('./demo/batman_3090_raw.bmp', 0)
     #img = plt.imread('./lena/lena_128x128.bmp', 0)
-    img = plt.imread('./legolas/bmp/88.bmp', 0)
+    img = plt.imread('./img.bmp', 0)
     jpeg_baseline(img, "out.jpeg", True)
